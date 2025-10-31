@@ -43,13 +43,7 @@ public partial class Login : ContentPage
             await DisplayAlert("Error", "Usuario o contraseña incorrectos", "Aceptar");
         }
     }
-
-    // Botón Registro
-    private async void BtnRegistro_Clicked(object sender, EventArgs e)
-    {
-        string usuario = EntryUsuario.Text;
-        await Navigation.PushAsync(new Registrate(usuario));
-    }
+ 
 
     // Botón Acerca de
     private async void BtnAcercaDe_Clicked(object sender, EventArgs e)

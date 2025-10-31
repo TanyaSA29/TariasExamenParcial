@@ -11,10 +11,10 @@
         <Label x:Name="LblUsuario" FontSize="18" TextColor="Blue"/>
 
         <!-- Información del estudiante -->
-        <Label Text="Nombre: Israel Voltiamperio" FontSize="16"/>
-        <Label Text="Carrera: Desarrollo de Software" FontSize="16"/>
-        <Label Text="Correo: israel@ejemplo.com" FontSize="16"/>
-        <Label Text="Materia: Moviles 2025" FontSize="16"/>
+        <Label Text="Nombre: Tanya Arias" FontSize="16"/>
+        <Label Text="Carrera: Ingenieria Informatica" FontSize="16"/>
+        <Label Text="Correo: u1725138729@uisrael.edu.ec" FontSize="16"/>
+        <Label Text="Materia: Aplicaciones Moviles 2025" FontSize="16"/>
 
         <!-- Botón para volver atrás -->
         <Button Text="Cerrar" Clicked="BtnCerrar_Clicked"/>
