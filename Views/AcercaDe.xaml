@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TariasExamen.Views.AcercaDe"
+             Title=""
+            Padding="20">
+
+    <StackLayout Spacing="20">
+
+        <!-- Usuario conectado -->
+        <Label x:Name="LblUsuario" FontSize="18" TextColor="Blue"/>
+
+        <!-- Información del estudiante -->
+        <Label Text="Nombre: Israel Voltiamperio" FontSize="16"/>
+        <Label Text="Carrera: Desarrollo de Software" FontSize="16"/>
+        <Label Text="Correo: israel@ejemplo.com" FontSize="16"/>
+        <Label Text="Materia: Moviles 2025" FontSize="16"/>
+
+        <!-- Botón para volver atrás -->
+        <Button Text="Cerrar" Clicked="BtnCerrar_Clicked"/>
+    </StackLayout>
+</ContentPage>

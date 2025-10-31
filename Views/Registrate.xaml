@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TariasExamen.Views.Registrate"
+             Title="Registrate"
+             Padding="25">
+    <ScrollView>
+        <StackLayout Spacing="20">
+
+            <!-- Usuario conectado -->
+            <Label x:Name="LblUsuario" FontSize="18" TextColor="Blue"/>
+
+            <!-- Título -->
+            <Label Text="REGISTRO" FontSize="22" TextColor="Blue" HorizontalOptions="Center"/>
+
+            <!-- Grid 2x3: Nombre, Apellido, VA -->
+            <Grid RowSpacing="10" ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nombre" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Apellido" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="VA" Grid.Row="0" Grid.Column="2"/>
+
+                <Entry x:Name="EntryNombre" Grid.Row="1" Grid.Column="0" Placeholder="Ingrese Nombre" TextChanged="SoloLetras"/>
+                <Entry x:Name="EntryApellido" Grid.Row="1" Grid.Column="1" Placeholder="Ingrese Apellido" TextChanged="SoloLetras"/>
+                <Picker x:Name="PickerVA" Grid.Row="1" Grid.Column="2">
+                    <Picker.Items>
+                        <x:String>VA1</x:String>
+                        <x:String>VA2</x:String>
+                        <x:String>VA3</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+
+            <!-- Grid 3x2: Fecha, Ciudad, Monto Inicial -->
+            <Grid RowSpacing="10" ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Fecha" Grid.Row="0" Grid.Column="0"/>
+                <DatePicker x:Name="DatePickerFecha" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Ciudad" Grid.Row="1" Grid.Column="0"/>
+                <Picker x:Name="PickerCiudad" Grid.Row="1" Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>Quito</x:String>
+                        <x:String>Guayaquil</x:String>
+                        <x:String>Cuenca</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Monto Inicial" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="EntryMonto" Grid.Row="2" Grid.Column="1" Keyboard="Numeric" TextChanged="SoloNumeros"/>
+            </Grid>
+
+            <!-- Grid: Botón calcular primero, Entry al lado -->
+            <Grid ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <!-- Botón -->
+                    <ColumnDefinition Width="*"/>
+                    <!-- Entry -->
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Calcular Pago Mensual"
+                        Clicked="BtnCalcularCuota_Clicked"
+                        Grid.Column="0"
+                        HorizontalOptions="Start"/>
+
+                <Entry x:Name="EntryCuota"
+                       IsReadOnly="True"
+                       Placeholder="Cuota Mensual"
+                       Grid.Column="1"
+                       HorizontalOptions="FillAndExpand"/>
+            </Grid>
+
+            <!-- Botón para ver resumen -->
+            <Button Text="Ver Resumen" Clicked="BtnVerResumen_Clicked"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

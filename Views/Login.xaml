@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TariasExamen.Views.Login"
+             Title="Login"
+             Padding="25">
+
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="20">
+
+            <!-- Logo de la empresa -->
+            <Image Source="logo.png" HeightRequest="120" HorizontalOptions="Center"/>
+
+            <!-- Título -->
+            <Label Text="LOGIN" Style="{StaticResource TituloGlobal}"/>
+
+            <!-- Grid de usuario y contraseña -->
+            <Grid RowSpacing="10" ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Campos -->
+                <Label Text="Usuario:" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="EntryUsuario" Grid.Row="0" Grid.Column="1" Placeholder="Ingrese usuario"/>
+
+                <Label Text="Contraseña:" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="EntryPassword" Grid.Row="1" Grid.Column="1" Placeholder="Ingrese contraseña" IsPassword="True"/>
+
+                <!-- Botones -->
+                <Button Text="Iniciar sesión" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Clicked="BtnLogin_Clicked"/>
+            
+                <Button Text="Acerca de" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Clicked="BtnAcercaDe_Clicked"/>
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
